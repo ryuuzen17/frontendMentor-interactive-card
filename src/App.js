@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import logo from "./images/card-logo.svg";
 import complete from "./images/icon-complete.svg";
 
@@ -36,7 +36,7 @@ function App() {
       setCardNameFormat(true);
       setDisableHandle(true);
       setNameColorError("hsl(0, 100%, 66%)");
-    } else if (val == "") {
+    } else if (val === "") {
       setCardNameEmpty(true);
       setDisableHandle(true);
       setNameColorError("hsl(0, 100%, 66%)");
@@ -57,7 +57,7 @@ function App() {
       setNumCardFormat(true);
       setDisableHandle(true);
       setNumColorError("hsl(0, 100%, 66%)");
-    } else if (val == "") {
+    } else if (val === "") {
       setNumCardEmpty(true);
       setDisableHandle(true);
       setNumColorError("hsl(0, 100%, 66%)");
@@ -71,7 +71,7 @@ function App() {
   const expMonthHandle = (e) => {
     let val = e.target.value;
     setExpMonth(val);
-    if (val == "") {
+    if (val === "") {
       setExpMonthEmpty(true);
       setExpMonthColorError("hsl(0, 100%, 66%)");
       setDisableHandle(true);
@@ -84,7 +84,7 @@ function App() {
   const expYearHandle = (e) => {
     let val = e.target.value;
     setExpYear(val);
-    if (val == "") {
+    if (val === "") {
       setExpYearEmpty(true);
       setExpYearColorError("hsl(0, 100%, 66%)");
       setDisableHandle(true);
@@ -97,7 +97,7 @@ function App() {
   const cvcHandleInput = (e) => {
     let val = e.target.value;
     setCvc(val);
-    if (val == "") {
+    if (val === "") {
       setCvcEmpty(true);
       setCvcColorError("hsl(0, 100%, 66%)");
       setDisableHandle(true);
