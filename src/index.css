@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+
+:root {
+  --Linear-gradient-active-input-border: hsl(249, 99%, 64%);
+  --Red-input-errors: hsl(0, 100%, 66%);
+  --White: hsl(0, 0%, 100%);
+  --Light-grayish-violet: hsl(270, 3%, 87%);
+  --Dark-grayish-violet: hsl(279, 6%, 55%);
+  --Very-dark-violet: hsl(278, 68%, 11%);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Space Grotesk", sans-serif;
+}
+.none {
+  display: none;
+}
+.border {
+  border-color: var(--Red-input-errors);
+}
+main .card {
+  display: flex;
+  gap: 20rem;
+}
+main .card .card-left {
+  position: relative;
+  background-image: url("./images/bg-main-desktop.png");
+  color: var(--White);
+  width: 30%;
+  height: 100vh;
+}
+main .card .card-left .card-front-user {
+  background-image: url("./images/bg-card-front.png");
+  background-size: cover;
+  border-radius: 10px 10px 10px 10px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  padding: 1rem 1rem;
+  width: 90%;
+  height: 30%;
+}
+main .card .card-left .card-front-user .numCard {
+  font-weight: 500;
+  margin-top: 2rem;
+}
+main .card .card-left .card-front-user .card-name {
+  display: flex;
+  padding-right: 0.5rem;
+  justify-content: space-between;
+}
+main .card .card-left .card-back-user {
+  background-image: url("./images/bg-card-back.png");
+  background-size: cover;
+  border-radius: 10px 10px 10px 10px;
+  background-repeat: no-repeat;
+  position: absolute;
+  position: relative;
+  top: 55%;
+  left: 70%;
+  box-shadow: 1px 1px 14px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  height: 30%;
+}
+main .card .card-left .card-back-user .cvc-text {
+  position: absolute;
+  top: 45%;
+  left: 80%;
+}
+main .card .card-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .card .card-right form .input {
+  margin-bottom: 2rem;
+}
+main .card .card-right form .input label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+}
+form {
+  width: 250px;
+}
+form .btn,
+button {
+  display: inline-block;
+  background-color: var(--Linear-gradient-active-input-border);
+  cursor: pointer;
+  color: var(--White);
+  padding: 0.8rem 0;
+}
+form .input .error-format,
+form .input .error-empty {
+  color: var(--Red-input-errors);
+  font-size: 0.8rem;
+}
+form .input input,
+button {
+  display: inline-block;
+  padding: 5px 10px;
+  width: 100%;
+  border-radius: 5px 5px 5px 5px;
+  border-width: 1px;
+}
+
+form input:hover {
+  border-color: var(--Very-dark-violet) !important;
+}
+form .grup-input {
+  display: flex;
+  justify-content: space-between;
+}
+form .grup-input .input .exp-grup {
+  display: flex;
+  gap: 1rem;
+  width: 120px;
+}
+form .grup-input .input .exp-grup input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 5px;
+}
+form .grup-input .input .cvc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 5px;
+  width: 80px;
+}
+.card .card-right .completed {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 250px;
+}
+.card .card-right .completed p {
+  color: var(--Dark-grayish-violet);
+}
+main .card .card-right .completed button {
+  padding: 1rem 1rem;
+}
+@media (max-width: 480px) {
+  body {
+    font-size: 75%;
+  }
+  main .card {
+    flex-direction: column;
+    gap: 5rem;
+  }
+  main .card .card-left {
+    background-image: url("./images/bg-main-mobile.png");
+    color: var(--White);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 250px;
+  }
+  main .card .card-left .card-front-user {
+    top: 50%;
+    left: 8%;
+    width: 75%;
+    height: 65%;
+    z-index: 1;
+  }
+  main .card .card-left .card-back-user {
+    top: 10%;
+    left: 18%;
+    width: 75%;
+    height: 65%;
+  }
+  main .card .card-left .card-front-user .card-name {
+    padding-right: 0.8rem;
+  }
+  main .card .card-right .completed button {
+    padding: 1rem 1rem;
+  }
+}
